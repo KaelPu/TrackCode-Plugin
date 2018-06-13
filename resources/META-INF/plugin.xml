@@ -1,16 +1,19 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
-  <name>Plugin display name here</name>
-  <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <id>com.karlpu.trackingcode</id>
+  <name>TrackingCode</name>
+  <version>0.1</version>
+  <vendor email="279291014@qq.com" url="http://www.puwenhui.com">karlpu</vendor>
 
   <description><![CDATA[
-      Enter short description for your plugin here.<br>
+      This is a plugin that tracks the code generation sequence diagram <br>
+      Course ：http://
+      这是一个跟踪代码生成流程图的插件 <br>
       <em>most HTML tags may be used</em>
     ]]></description>
 
   <change-notes><![CDATA[
-      Add change notes here.<br>
+      Test Version 0.1<br>
+      测试版本 0.1<br>
       <em>most HTML tags may be used</em>
     ]]>
   </change-notes>
@@ -36,6 +39,10 @@
       <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt u"/>
     </action>
 
+    <action id="TrackActionNote" class="com.karlpu.trackcode.TrackActionNote" text="TrackActionNote"
+            description="write Note">
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt U"/>
+    </action>
   </actions>
 
 </idea-plugin>

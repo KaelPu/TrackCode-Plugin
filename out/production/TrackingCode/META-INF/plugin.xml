@@ -1,8 +1,8 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
-  <name>Plugin display name here</name>
+  <id>com.karlpu.trackingcode</id>
+  <name>TrackingCode</name>
   <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <vendor email="279291014@qq.com" url="http://www.puwenhui.com">karlpu</vendor>
 
   <description><![CDATA[
       Enter short description for your plugin here.<br>
@@ -36,6 +36,10 @@
       <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt u"/>
     </action>
 
+    <action id="TrackActionNote" class="com.karlpu.trackcode.TrackActionNote" text="TrackActionNote"
+            description="write Note">
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt U"/>
+    </action>
   </actions>
 
 </idea-plugin>

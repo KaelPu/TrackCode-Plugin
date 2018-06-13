@@ -14,7 +14,7 @@ public class PluginUtil {
 
     public static final String TRACK_DIR_NAME = "track";
     public static final String TRACK_MARKDOWN_NAME = "track.md";
-
+    public static String FIRST_CLASS_NAME;
     public static int classNum = 0;
 
 
@@ -72,6 +72,17 @@ public class PluginUtil {
         return trackFile;
     }
 
+    private void writeHeadAndFoot(VirtualFile file){
+        if(file != null){
+            try {
+                String str = "```sequence"+System.getProperty("line.separator");
+                file.setBinaryContent(str.getBytes("utf-8"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public PsiFile getManifestFile() {
         String path = project.getBasePath() + File.separator +
                 "app" + File.separator +
@@ -106,14 +117,18 @@ public class PluginUtil {
             VirtualFile trackFile = PluginUtil.getInstance().getTrackPluginFile();
             if (trackFile != null) {
                 try {
-                    String oldStr = new String(trackFile.contentsToByteArray());
+                    String oldStr = new String(trackFile.contentsToByteArray(),"utf-8");
                     String newStr = oldStr + str;
-                    trackFile.setBinaryContent(newStr.getBytes());
+                    trackFile.setBinaryContent(newStr.getBytes("utf-8"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }
+    }
+
+    public void markFirstClassName(String name) {
+        FIRST_CLASS_NAME = name;
     }
 
 

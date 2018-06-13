@@ -23,9 +23,10 @@ public class TrackAction extends AnAction {
     public void actionPerformed(AnActionEvent e) {
         // TODO: insert action logic here
         PluginUtil.getInstance().init(e.getProject());
-//        Messages.showMessageDialog("Hello World !", "Information", Messages.getInformationIcon());
         if(PluginUtil.classNum == 0){
-            PluginUtil.getInstance().writeTrackFile(getClassName(e)+"->");
+            String className = getClassName(e);
+            PluginUtil.getInstance().writeTrackFile(className+"->");
+            PluginUtil.getInstance().markFirstClassName(className);
             PluginUtil.classNum++;
         }else if(PluginUtil.classNum == 1){
             PluginUtil.getInstance().writeTrackFile(getClassName(e));
