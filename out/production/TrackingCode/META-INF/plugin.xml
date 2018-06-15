@@ -5,14 +5,22 @@
   <vendor email="279291014@qq.com" url="http://www.puwenhui.com">karlpu</vendor>
 
   <description><![CDATA[
-      TrackCode能够帮你跟踪记录代码调用顺序<br>
-      自动生成特定格式的文本<br>
-      该文本可以通过Markdown工具自动生成时序图<br>
+      TrackCode是一款帮助你记录跟踪代码的插件<br>
+      <br>
+      它能记录代码执行流程，生成时序图<br>
+      <br>
+      它会按照markdown格式记录代码的流程<br>
+      <br>
+      通过markdown软件转换成流程图<br>
+      <br>
+      能方便的帮助你梳理代码逻辑<br>
+      <br>
       <a href="https://www.puwenhui.com/2018/06/11/TrackCode">使用说明参考</a>
     ]]></description>
 
   <change-notes><![CDATA[
-      1.0 版本  2018.6.15
+      * 添加右键记录<br>
+      * 优化记录逻辑<br>
     ]]>
   </change-notes>
 
