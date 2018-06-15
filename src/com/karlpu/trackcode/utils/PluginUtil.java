@@ -16,6 +16,7 @@ public class PluginUtil {
     public static final String TRACK_MARKDOWN_NAME = "track.md";
     public static String FIRST_CLASS_NAME;
     public static int classNum = 0;
+    public static boolean note = false;
 
 
     Project project;

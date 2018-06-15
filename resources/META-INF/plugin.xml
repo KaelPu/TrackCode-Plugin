@@ -1,20 +1,26 @@
 <idea-plugin>
   <id>com.karlpu.trackingcode</id>
-  <name>TrackingCode</name>
-  <version>0.1</version>
+  <name>TrackCode</name>
+  <version>1.0</version>
   <vendor email="279291014@qq.com" url="http://www.puwenhui.com">karlpu</vendor>
 
   <description><![CDATA[
-      This is a plugin that tracks the code generation sequence diagram <br>
-      Course ：http://
-      这是一个跟踪代码生成流程图的插件 <br>
-      <em>most HTML tags may be used</em>
+      TrackCode是一款帮助你记录跟踪代码的插件<br>
+      <br>
+      它能记录代码执行流程，生成时序图<br>
+      <br>
+      它会按照markdown格式记录代码的流程<br>
+      <br>
+      通过markdown软件转换成流程图<br>
+      <br>
+      能方便的帮助你梳理代码逻辑<br>
+      <br>
+      <a href="https://www.puwenhui.com/2018/06/11/TrackCode">使用说明参考</a>
     ]]></description>
 
   <change-notes><![CDATA[
-      Test Version 0.1<br>
-      测试版本 0.1<br>
-      <em>most HTML tags may be used</em>
+      * 添加右键记录<br>
+      * 优化记录逻辑<br>
     ]]>
   </change-notes>
 
@@ -33,16 +39,18 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="TrackingCode.TrackAction" class="com.karlpu.trackcode.TrackAction" text="TrackingCode"
-            description="TrackingCode">
-      <add-to-group group-id="EditMenu" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt u"/>
-    </action>
+    <group id="TrackCodeAction.TrackGroup" text="_TrackingCode" popup="true">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <action id="TrackingCode.TrackAction" class="com.karlpu.trackcode.TrackAction" text="Track Code"
+              description="Track Code">
+        <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt u"/>
+      </action>
+      <action id="TrackActionNote" class="com.karlpu.trackcode.TrackActionNote" text="Write Note"
+              description="Write Note">
+        <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt U"/>
+      </action>
+    </group>
 
-    <action id="TrackActionNote" class="com.karlpu.trackcode.TrackActionNote" text="TrackActionNote"
-            description="write Note">
-      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt U"/>
-    </action>
   </actions>
 
 </idea-plugin>

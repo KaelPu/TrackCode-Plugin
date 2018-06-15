@@ -1,17 +1,18 @@
 <idea-plugin>
   <id>com.karlpu.trackingcode</id>
-  <name>TrackingCode</name>
+  <name>TrackCode</name>
   <version>1.0</version>
   <vendor email="279291014@qq.com" url="http://www.puwenhui.com">karlpu</vendor>
 
   <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+      TrackCode能够帮你跟踪记录代码调用顺序<br>
+      自动生成特定格式的文本<br>
+      该文本可以通过Markdown工具自动生成时序图<br>
+      <a href="https://www.puwenhui.com/2018/06/11/TrackCode">使用说明参考</a>
     ]]></description>
 
   <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+      1.0 版本  2018.6.15
     ]]>
   </change-notes>
 
@@ -30,16 +31,18 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="TrackingCode.TrackAction" class="com.karlpu.trackcode.TrackAction" text="TrackingCode"
-            description="TrackingCode">
-      <add-to-group group-id="EditMenu" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt u"/>
-    </action>
+    <group id="TrackCodeAction.TrackGroup" text="_TrackingCode" popup="true">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <action id="TrackingCode.TrackAction" class="com.karlpu.trackcode.TrackAction" text="Track Code"
+              description="Track Code">
+        <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt u"/>
+      </action>
+      <action id="TrackActionNote" class="com.karlpu.trackcode.TrackActionNote" text="Write Note"
+              description="Write Note">
+        <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt U"/>
+      </action>
+    </group>
 
-    <action id="TrackActionNote" class="com.karlpu.trackcode.TrackActionNote" text="TrackActionNote"
-            description="write Note">
-      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt U"/>
-    </action>
   </actions>
 
 </idea-plugin>
