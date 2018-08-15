@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.karlpu.trackingcode</id>
   <name>TrackCode</name>
-  <version>1.0</version>
+  <version>3.1</version>
   <vendor email="279291014@qq.com" url="http://www.puwenhui.com">karlpu</vendor>
 
   <description><![CDATA[
@@ -25,7 +25,7 @@
   </change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="173.0"/>
+  <idea-version since-build="162" until-build="173.*"/>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
